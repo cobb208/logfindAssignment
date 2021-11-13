@@ -16,7 +16,7 @@ char** logFileNames();
 
 int main(int argc, char *argv[])
 {
-    check((argc == 0), "Arguements required, please enter the search terms you want to look for in the log\nUse the -o to search for terms in one file.");
+    //check((argc == 0), "Arguements required, please enter the search terms you want to look for in the log\nUse the -o to search for terms in one file.");
 
     unsigned int is_or = setIsOr(argc, argv); // set the and/or operator from -o flag
     FILE *fp;
@@ -24,8 +24,8 @@ int main(int argc, char *argv[])
     
     // Gets all file names in the log folder that end with .log
     char **logfile = logFileNames();
-    check(logfile == NULL, "Failed to open directory and find log files!");
-    
+    //check(logfile == NULL, "Failed to open directory and find log files!");
+
     int i = 0;
     while(logfile[i] != NULL)
     {
